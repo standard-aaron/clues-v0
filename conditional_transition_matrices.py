@@ -7,7 +7,7 @@ from scipy.misc import logsumexp
 from scipy.optimize import minimize
 import scipy.stats as stats
 import scipy.optimize as opt
-import clues
+import clues_utils as clues
 import glob
 import h5py
 from Bio import Phylo
