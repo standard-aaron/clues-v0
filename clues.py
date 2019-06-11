@@ -548,7 +548,8 @@ for (k,line) in enumerate(lines):
 	individualFreqHat = FREQS[np.argmax(TIME_ALPHA_DICT[(k,imax[0],imax[1],imax[1]+1)] + TIME_BETA_DICT[(k,imax[0],imax[1],imax[1]+1)])]
 	#import pdb; pdb.set_trace()
 	
-	print('Sample %d:\t%.6f\t%.1f\t%.3f'%(k,S_GRID[imax[0]],AW_TIMES[imax[1]],np.max(individualLogLRs[:,:,k])))
+	if args.debug:
+		print('Sample %d:\t%.6f\t%.1f\t%.3f'%(k,S_GRID[imax[0]],AW_TIMES[imax[1]],np.max(individualLogLRs[:,:,k])))
 
 individualLogLRs[np.where(np.isnan(individualLogLRs))] = -np.inf
 
