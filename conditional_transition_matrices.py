@@ -69,7 +69,7 @@ def load_transition_probabilities(transMatDir,popsize,name=None):
         smin = 999
 
         for h5 in glob.glob(transMatDir+'*'):
-                sstr = h5.split('s_')[1].split('.')[0]
+                sstr = h5.split('.s_')[1].split('.')[0]
                 s = float(sstr.replace('p','.'))
                 if s < smin:
                         smin = s
